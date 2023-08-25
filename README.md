@@ -106,7 +106,7 @@ Building
 cd
 git clone https://gitlab.eurecom.fr/kharade/gnbsim.git
 cd gnbsim
-docker build --tag gnbsim:latest --target gnbsim --file docker/Dockerfile.ubuntu.22.04 .
+sudo docker build --tag gnbsim:latest --target gnbsim --file docker/Dockerfile.ubuntu.20.04 .
 ```
 ### Running the core
 
@@ -134,8 +134,8 @@ sudo docker logs oai-smf | grep -o '.*UE IPv4 Address.*' | grep 'UE IPv4 Address
 ```
 
 ```
-docker exec oai-ext-dn ping -c 3 12.1.1.2 #Here we ping UE from external DN container.
-docker exec gnbsim ping -c 3 -I 12.1.1.2 google.com #Here we ping external DN from UE (gnbsim) container.
+sudo docker exec oai-ext-dn ping -c 3 12.1.1.2 #Here we ping UE from external DN container.
+sudo docker exec gnbsim ping -c 3 -I 12.1.1.2 google.com #Here we ping external DN from UE (gnbsim) container.
 ```
 
 ### Iperf test
