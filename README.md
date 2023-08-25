@@ -80,6 +80,18 @@ Output
 Docker Compose version v2.3.3
 "
 
+#### Step 3 — Install
+
+```
+git clone https://github.com/abhic137/OAI-5G-GNBSIM-SPGWU.git
+```
+cd OAI-5G-GNBSIM-SPGWU/5gcwithgnbsim
+
+```
+sudo docker compose -f docker-compose-basic-nrf.yaml up -d
+```
+
+
 
 
         
